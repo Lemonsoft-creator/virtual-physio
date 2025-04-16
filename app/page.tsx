@@ -7,7 +7,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data, error } = await supabase.from('exercises').select('*')
+      const { data } = await supabase.from('exercises').select('*')
       if (data) setExercises(data)
     }
     fetchData()
