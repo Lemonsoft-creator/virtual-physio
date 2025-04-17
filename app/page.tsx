@@ -1,7 +1,3 @@
-console.log("LandingPage loaded")
-git mv app/landing/page.tsx app/page.tsx
-git commit -m "Set landing page as homepage"
-git push origin main
 export default function LandingPage() {
   return (
     <main className="p-8 space-y-16 text-gray-800">
@@ -33,33 +29,30 @@ export default function LandingPage() {
       <section id="vorteile" className="max-w-5xl mx-auto space-y-10">
         <h2 className="text-3xl font-semibold text-center">Deine Vorteile</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white shadow p-6 rounded-xl text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="Individuelle Therapie"
-              className="w-20 h-20 mx-auto mb-4"
-            />
-            <h3 className="font-bold text-lg">Individuelle Therapiepläne</h3>
-            <p>Basierend auf Anamnese & Feedback automatisch angepasst.</p>
-          </div>
-          <div className="bg-white shadow p-6 rounded-xl text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="Feedback"
-              className="w-20 h-20 mx-auto mb-4"
-            />
-            <h3 className="font-bold text-lg">Echtes Patientenfeedback</h3>
-            <p>Direkt integriert: Schmerzlevel, Ausführung & Motivation.</p>
-          </div>
-          <div className="bg-white shadow p-6 rounded-xl text-center">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="Zeit sparen"
-              className="w-20 h-20 mx-auto mb-4"
-            />
-            <h3 className="font-bold text-lg">Effizient für Therapeut:innen</h3>
-            <p>Trainingsplanung & Fortschritt auf einen Blick.</p>
-          </div>
+          {[
+            {
+              title: "Individuelle Therapiepläne",
+              text: "Basierend auf Anamnese & Feedback automatisch angepasst.",
+            },
+            {
+              title: "Echtes Patientenfeedback",
+              text: "Direkt integriert: Schmerzlevel, Ausführung & Motivation.",
+            },
+            {
+              title: "Effizient für Therapeut:innen",
+              text: "Trainingsplanung & Fortschritt auf einen Blick.",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white shadow p-6 rounded-xl text-center">
+              <img
+                src="https://via.placeholder.com/80"
+                alt={item.title}
+                className="w-20 h-20 mx-auto mb-4"
+              />
+              <h3 className="font-bold text-lg">{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -71,13 +64,13 @@ export default function LandingPage() {
             <p className="italic">
               "Endlich eine Plattform, die meine Patient:innen wirklich motiviert!"
             </p>
-            <footer className="mt-2 text-sm text-right">- Physiotherapeutin Anna M.</footer>
+            <footer className="mt-2 text-sm text-right">– Physiotherapeutin Anna M.</footer>
           </blockquote>
           <blockquote className="bg-white p-6 rounded-xl shadow">
             <p className="italic">
               "Ich sehe meine Fortschritte und bleibe dran. Das macht echt Spaß."
             </p>
-            <footer className="mt-2 text-sm text-right">- Patient Jonas K.</footer>
+            <footer className="mt-2 text-sm text-right">– Patient Jonas K.</footer>
           </blockquote>
         </div>
       </section>
@@ -87,5 +80,5 @@ export default function LandingPage() {
         &copy; {new Date().getFullYear()} Virtueller Physio. Alle Rechte vorbehalten.
       </footer>
     </main>
-  )
+  );
 }
