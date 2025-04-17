@@ -1,3 +1,4 @@
+console.log("LandingPage loaded")
 git mv app/landing/page.tsx app/page.tsx
 git commit -m "Set landing page as homepage"
 git push origin main
