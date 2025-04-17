@@ -1,3 +1,6 @@
+git mv app/landing/page.tsx app/page.tsx
+git commit -m "Set landing page as homepage"
+git push origin main
 export default function LandingPage() {
   return (
     <main className="p-8 space-y-16 text-gray-800">
