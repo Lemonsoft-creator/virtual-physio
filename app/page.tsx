@@ -11,6 +11,18 @@ export default function LandingPage() {
         </p>
         <div className="space-x-4 mt-6">
           <a
+            href="/therapeuten"
+            className="inline-block px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 text-lg"
+          >
+            Für Therapeut:innen
+          </a>
+          <a
+            href="/patienten"
+            className="inline-block px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700 text-lg"
+          >
+            Für Trainierende
+          </a>
+          <a
             href="/login"
             className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 text-lg"
           >
