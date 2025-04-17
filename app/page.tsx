@@ -31,7 +31,7 @@ export default function LandingPage() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white shadow p-6 rounded-xl text-center">
             <img
-              src="/vorteil1.png"
+              src="https://via.placeholder.com/80"
               alt="Individuelle Therapie"
               className="w-20 h-20 mx-auto mb-4"
             />
@@ -40,7 +40,7 @@ export default function LandingPage() {
           </div>
           <div className="bg-white shadow p-6 rounded-xl text-center">
             <img
-              src="/vorteil2.png"
+              src="https://via.placeholder.com/80"
               alt="Feedback"
               className="w-20 h-20 mx-auto mb-4"
             />
@@ -49,7 +49,7 @@ export default function LandingPage() {
           </div>
           <div className="bg-white shadow p-6 rounded-xl text-center">
             <img
-              src="/vorteil3.png"
+              src="https://via.placeholder.com/80"
               alt="Zeit sparen"
               className="w-20 h-20 mx-auto mb-4"
             />
@@ -84,4 +84,4 @@ export default function LandingPage() {
       </footer>
     </main>
   )
-} 
+}
